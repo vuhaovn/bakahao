@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+#blog {
+  padding-top: 70px;
+}
+
+/*================================================
+  article
+================================================*/
+
+#article {
+  float: left;
+  width: 650px;
+}
+
+#article .items {
+  overflow: hidden;
+}
+
+#article .items li {
+  float: left;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+}
+
+#article .items li a {
+  position: relative;
+  display: block;
+}
+
+#article .items li img {
+  width: 100%;
+}
+
+#article .items li span {
+  display: block;
+}
+
+#article .items li .type {
+  color: #adadad;
+  margin-bottom: 5px;
+}
+
+#article .items li .name {
+  color: #fff;
+  font-size: 134%;
+}
+
+#article .items li .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: url(/img/bg-header.png) repeat 0 0;
+}
+
+
+/*================================================
+  article
+================================================*/
+
+#aside {
+  float: right;
+  width: 260px;
+  background: #333;
+}
+
+#aside .items h2 {
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #222;
+  color: #b2b2b2;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 125%;
+  font-weight: normal;
+  position: relative;
+}
+
+#aside .items h2:before,
+#aside .items h2:after {
+  content: "";
+  position: absolute;
+  background: #b2b2b2;
+  transition: transform 0.25s ease-out;
+}
+
+#aside .items h2:before {
+  top: 50%;
+  margin-top: -5px;
+  right: 24px;
+  width: 2px;
+  height: 10px;
+  background: #b2b2b2;
+}
+
+#aside .items h2:after {
+	top: 50%;
+  margin-top: -1px;
+	right: 20px;
+	width: 10px;
+	height: 2px;
+}
+
+#aside .items h2.open:before {
+  transform: rotate(90deg);
+}
+
+#aside .items ul {
+  padding: 10px 20px 2px;
+  display: none;
+}
+
+#aside .items li {
+  padding-bottom: 10px;
+}
+
+#aside .items li a {
+  color: #bbb;
+  font-size: 117%;
+  font-family: "Open sans";
+}
+
+#aside .items li a:hover {
+  color: #1ABC9C;
+}
+
+@media screen and (min-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 767px) {
+  #article .items li img {
+    width: 100%;
+  }
+}

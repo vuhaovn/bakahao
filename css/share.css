@@ -1,0 +1,237 @@
+@charset "utf-8";
+/*---------------------------------------
+    リセットCSS（編集不要）
+----------------------------------------*/
+html{overflow-y:scroll;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;}table{border-collapse:collapse;border-spacing:0;}caption,th{text-align:left;}q:before,q:after{content:'';}object,embed{vertical-align:top;}hr,legend{display:none;}h1,h2,h3,h4,h5,h6{font-size:100%;}img,abbr,acronym,fieldset{border:0;}ul li{list-style-type:none;}a,label{cursor:pointer;}img{vertical-align:bottom;margin:0;padding:0;}
+
+body {
+  font-family: 'Lucida Grande','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',Meiryo,メイリオ,sans-serif;
+  font-size: 76%;
+  background: #f3f3f3;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+       -o-transition: all .5s ease;
+          transition: all .5s ease;
+}
+
+a:hover {
+  color: #1ABC9C;
+}
+
+.img_res {
+  width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Open sans";
+  src: url(/fonts/OpenSans-Light.ttf);
+}
+
+.clearfix:after {
+  content:".";display:block;visibility:hidden;height:0.1px;font-size:0.1em;line-height:0;clear:both;
+}
+
+::selection {
+  background: #1ABC9C;
+  color: #FFF;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#loading {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#loading ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#loading ul li {
+  display: inline-block;
+  margin: 0 25px;
+  color: #fff;
+  font-family: Open Sans, Arial;
+  font-weight: 200;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 2.5s ease;
+  -moz-transition: all 2.5s ease;
+  -ms-transition: all 2.5s ease;
+  -o-transition: all 2.5s ease;
+  transition: all 2.5s ease;
+}
+
+#loading ul.hidden {
+  opacity: 0;
+}
+
+#loading ul.hidden li:nth-child(1) {
+  transform: translate(-200px, -200px);
+}
+
+#loading ul.hidden li:nth-child(2) {
+  transform: translate(20px, 100px);
+}
+
+#loading ul.hidden li:nth-child(3) {
+  transform: translate(-150px, -80px);
+}
+
+#loading ul.hidden li:nth-child(4) {
+  transform: translate(10px, -200px);
+}
+
+#loading ul.hidden li:nth-child(5) {
+  transform: translate(-300px, 200px);
+}
+
+#loading ul.hidden li:nth-child(6) {
+  transform: translate(20px, -20px);
+}
+
+#loading ul.hidden li:nth-child(7) {
+  transform: translate(30px, 200px);
+}
+
+/*---------------------------------------
+    header
+----------------------------------------*/
+header {
+  border-bottom: 1px solid #eee;
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .logo {
+  float: left;
+  width: 150px;
+  line-height: 100%;
+}
+
+header .logo a {
+  display: block;
+}
+
+header .logo a img {
+  height: 50px;
+}
+
+footer .copyright {
+  text-align: center;
+  padding: 30px 0 50px;
+}
+
+footer .inner {
+  position: relative;
+}
+
+footer .back_top {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  background: #1ABC9C;
+}
+
+@media screen and (min-width: 768px) {
+
+  header .header_menu {
+    float: right;
+  }
+
+  header .header_menu ul {
+    overflow: hidden;
+  }
+
+  header .header_menu ul li {
+    float: left;
+    border-right: 1px solid #444;
+    border-left: 1px solid #222;
+  }
+
+  header .header_menu ul li a {
+    font-size: 92%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color: #999;
+    display: block;
+    font-family: "Open sans";
+    padding: 0 15px;
+  }
+
+  header .header_menu ul li a:hover {
+    color: #1ABC9C;
+    background: #222;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  header .header_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    width: 50%;
+    height: 100vh;
+  }
+
+  header .header_menu ul li {
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #222;
+  }
+
+  header .header_menu ul li a {
+    font-size: 92%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color: #999;
+    display: block;
+    font-family: "Open sans";
+    padding: 0 10px;
+    text-align: right;
+  }
+
+}
