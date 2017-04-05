@@ -5,7 +5,7 @@ var stars = [];
 var speed;
 
 function setup() {
-	createCanvas(1116, 890);
+	createCanvas(windowWidth, windowHeight);
 	for (var i = 0; i < 800; i++) {
 		stars[i] = new Star();
 	}
@@ -24,4 +24,8 @@ function draw() {
 		stars[i].show();
 	}
 
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
