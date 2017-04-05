@@ -14,54 +14,41 @@
 </head>
 <body>
 
-<header>
-  <div class="inner">
-    <h1 class="logo"><a href="#"><img src="/img/logo-bakahao_white.png" alt=""></a></h1>
-    <div class="header_menu">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#works">Project</a></li>
-        <li><a href="/blog/">Blog</a></li>
-      </ul>
-  <!-- /.inner --></div>
-  <!-- /.header_menu --></div>
-</header>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/tpl/header.tpl"); ?>
 
-<section id="blog">
+<section id="blog" class="blog_wrap">
   <div class="inner clearfix">
     <div id="article">
       <ul class="items">
-        <li><a href="#">
+        <li><a href="/blog/detail/">
           <img src="../img/dummy.jpg" alt="">
           <span class="description">
             <span class="type">Gift</span>
             <span class="name">Truyện tranh Death Note từ Suzuki</span>
           </span>
         </a></li>
-        <li><a href="#">
+        <li><a href="/blog/detail/">
           <img src="../img/dummy.jpg" alt="">
           <span class="description">
             <span class="type">Gift</span>
             <span class="name">Truyện tranh Death Note từ Suzuki</span>
           </span>
         </a></li>
-        <li><a href="#">
+        <li><a href="/blog/detail/">
           <img src="../img/dummy.jpg" alt="">
           <span class="description">
             <span class="type">Gift</span>
             <span class="name">Truyện tranh Death Note từ Suzuki</span>
           </span>
         </a></li>
-        <li><a href="#">
+        <li><a href="/blog/detail/">
           <img src="../img/dummy.jpg" alt="">
           <span class="description">
             <span class="type">Gift</span>
             <span class="name">Truyện tranh Death Note từ Suzuki</span>
           </span>
         </a></li>
-        <li><a href="#">
+        <li><a href="/blog/detail/">
           <img src="../img/dummy.jpg" alt="">
           <span class="description">
             <span class="type">Gift</span>
@@ -71,36 +58,12 @@
       </ul>
     <!-- /#article --></div>
     <div id="aside">
-      <div class="items">
-        <h2>3月10日2017年</h2>
-        <ul>
-          <li><a href="#">Birthday Party</a></li>
-          <li><a href="#">Birthday Party</a></li>
-          <li><a href="#">Birthday Party</a></li>
-          <li><a href="#">Birthday Party</a></li>
-        </ul>
-      <!-- /.items --></div>
-      <div class="items">
-        <h2>3月10日2016年</h2>
-        <ul>
-          <li><a href="#">Company trip</a></li>
-          <li><a href="#">Company trip</a></li>
-          <li><a href="#">Company trip</a></li>
-          <li><a href="#">Company trip</a></li>
-        </ul>
-      <!-- /.items --></div>
-      <div class="items">
-        <h2>3月10日2015年</h2>
-        <ul>
-          <li><a href="#">New Game</a></li>
-          <li><a href="#">New Game</a></li>
-          <li><a href="#">New Game</a></li>
-          <li><a href="#">New Game</a></li>
-        </ul>
-      <!-- /.items --></div>
+      <?php include($_SERVER["DOCUMENT_ROOT"]."/tpl/aside.tpl"); ?>
     <!-- /#aside --></div>
   <!-- /.inner --></div>
 </section>
+
+<?php include($_SERVER["DOCUMENT_ROOT"]."/tpl/footer.tpl"); ?>
 
 
 <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
