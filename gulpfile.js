@@ -9,10 +9,9 @@ gulp.task("serve", function() {
       baseDir: "."
     }
   });
-  gulp.watch("index.html", reload);
   gulp.watch("**/*.html", reload);
-  gulp.watch("css/*.css", reload);
-  gulp.watch("js/*.js", reload);
+  gulp.watch("**/*.css", reload);
+  gulp.watch("**/*.js", reload);
 });
 
 gulp.task("default", ["serve"]);

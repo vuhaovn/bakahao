@@ -38,7 +38,7 @@ function Firework() {
   }
 
   this.explode = function() {
-    for (var i = 0; i < 200; i++) {
+    for (var i = 0; i < 200; i++) { //  số lương tia nổ ra
       var p = new Particle(this.firework.pos.x, this.firework.pos.y, this.hue, false);
       this.particles.push(p);
     }
