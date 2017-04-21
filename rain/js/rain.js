@@ -15,5 +15,4 @@ function Rain() {
     fill(this.hue, this.hue, this.hue);
     ellipse(this.x, this.y, 10, 10);
   }
-
 }

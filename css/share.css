@@ -49,6 +49,12 @@ a:hover {
   color: #FFF;
 }
 
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .inner {
   width: 960px;
   margin: 0 auto;
