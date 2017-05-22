@@ -3,13 +3,18 @@ var img;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	leaf = new Leaf();
+	for (var i = 0; i< 1; i++) {
+		leaf[i] = new Leaf();
+	}
 }
 
 function draw() {
 	background(0);
-	leaf.update();
-	leaf.show();
+  
+	for (var i = 0; i< leaf.length; i++) {
+		leaf[i].update();
+		leaf[i].show();
+	}
 }
 
 function windowResized() {
